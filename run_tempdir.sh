@@ -1,6 +1,9 @@
 #!/bin/bash
-classpath=/home/mrg/Work/JavaTempDir/TempDir
-ml Java/11.0.2
-hostname
-echo JAVA_TOOL_OPTIONS is "${JAVA_TOOL_OPTIONS}"
+
+ml ${Java}
+
+echo "Running on host: $(hostname)"
+echo "Slurm JobID is: ${SLURM_JOB_ID}"
+echo "JAVA_TOOL_OPTIONS is ${JAVA_TOOL_OPTIONS}"
+echo
 java -cp ${classpath} TempDir
